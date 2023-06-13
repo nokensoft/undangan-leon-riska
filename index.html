@@ -31,12 +31,14 @@
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/sass/style.css" rel="stylesheet">
 
-    
+    <style>
+        
+    </style>
     <!-- SWEETALERT -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 
-<body class="color1">
+<body class="color1 bg-secondary" id="body" >
     <!-- button play & pause start -->
     <div id="sound-controls">
         <a href="#pause" class="pause-btn d-none" onclick="pauseButton()" id="pause-btn">
@@ -96,24 +98,24 @@
                                             <button class="menu-close"><i class="ti-close"></i></button>
                                             <ul class="nav navbar-nav mb-2 mb-lg-0">
                                                 <li class="">
-                                                    <a class="" href="#home">Home</a>
+                                                    <a class="" href="#home">Beranda</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#couple">Couple</a>
+                                                    <a href="#couple">Pasangan</a>
                                                 </li>
-                                                <li class="">
-                                                    <a href="#gallery">Gallery</a>
-                                                </li>
+                                               
                                                 <li>
                                                     <a href="#doa">Doa & Ucapan</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#event">Event</a>
+                                                    <a href="#event">Acara</a>
                                                 </li>
                                                 <li>
                                                     <a href="#digital">Dompet Digital</a>
                                                 </li>
-                                               
+                                                <li class="">
+                                                    <a href="#gallery">Gallery</a>
+                                                </li>                                               
                                             </ul>
         
                                         </div><!-- end of nav-collapse -->
@@ -132,10 +134,10 @@
                 </header>
         <!-- end of header -->
         <!-- start of hero -->
-        <section class="wpo-hero-slider wpo-hero-style-3 " id="home"  >
-            <div class="wedding-announcement mt-5 ">
+        <section class="wpo-hero-slider wpo-hero-style-3" id="home"   >
+            <div class="wedding-announcement " style="height: 100%;  ">
                 <div class="couple-text " >
-                    <h3 class="wow slideInUp text-white" data-wow-duration="1s">Undangan Pernikahan</h3>
+                    <h3 class="wow slideInUp text-white mt-5" data-wow-duration="1s">Undangan Pernikahan</h3>
                     <h2 class="wow slideInUp" data-wow-duration="1s">Leon & Riska</h2>
                     <!-- start wpo-wedding-date -->
                     <div class="wpo-wedding-date wow slideInUp" data-wow-duration="2.1s">
@@ -161,7 +163,6 @@
                             </div>
                         </div>
                        
-                      
                      </div>
                 </div>
                 
@@ -200,21 +201,21 @@
         </section>
         <!-- end of hero slider -->
         <!-- start couple-section -->
-        <section class="couple-section-s2 section-padding"  id="">
+        <section class="couple-section-s2 section-padding d-none"  id="couple">
             <div class="container">
                 <div class="row align-items-center justify-content-center">
                     <div class="col col-lg-11">
                         <div class="couple-area clearfix">
                             <div class="couple-item bride">
                                 <div class="row align-items-center">
-                                    <!-- <div class="col-lg-4">
+                                    <div class="col-lg-4">
                                         <div class="couple-img">
-                                            <img src="assets/images/couple/4.jpg" alt="">
+                                            <img src="assets/images/couple/4.png" alt="">
                                             <div class="couple-shape">
                                                 <img src="assets/images/couple/shape-3.png" alt="">
                                             </div>
                                         </div>
-                                    </div> -->
+                                    </div>
                                     <div class="col-lg-7">
                                         <div class="couple-text">
                                             <h3>Leonardo A. Numberi</h3>
@@ -258,14 +259,14 @@
                                             </div> -->
                                         </div>
                                     </div>
-                                    <!-- <div class="col-lg-4 order-lg-2 order-1">
+                                    <div class="col-lg-4 order-lg-2 order-1">
                                         <div class="couple-img">
-                                            <img src="assets/images/couple/5.jpg" alt="">
+                                            <img src="assets/images/couple/5.png" alt="">
                                             <div class="couple-shape">
                                                 <img src="assets/images/couple/shape-4.png" alt="">
                                             </div>
                                         </div>
-                                    </div> -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -296,97 +297,7 @@
         
         <!-- end story-section -->
 
-        <!-- start wpo-portfolio-section -->
-        <section class="wpo-portfolio-section section-padding pt-0"  id="gallery">
-            <div class="container">
-                <div class="row">
-                    <div class="wpo-section-title">
-                        <div class="section-title-icon">
-                            <i class="fi flaticon-dove"></i>
-                        </div>
-                        <h2>Sweet Captured Moments</h2>
-                    </div>
-                </div>
-                <div class="sortable-gallery">
-                    <div class="gallery-filters"></div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="portfolio-grids gallery-container clearfix">
-                                <div class="grid">
-                                    <div class="img-holder">
-                                        <a href="assets/images/portfolio/7.png" class="fancybox"
-                                            data-fancybox-group="gall-1">
-                                            <img src="assets/images/portfolio/7.png" alt class="img img-responsive">
-                                            <div class="hover-content">
-                                                <i class="ti-plus"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="grid">
-                                    <div class="img-holder">
-                                        <a href="assets/images/portfolio/8.png" class="fancybox"
-                                            data-fancybox-group="gall-1">
-                                            <img src="assets/images/portfolio/8.png" alt class="img img-responsive">
-                                            <div class="hover-content">
-                                                <i class="ti-plus"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="grid">
-                                    <div class="img-holder">
-                                        <a href="assets/images/portfolio/9.png" class="fancybox"
-                                            data-fancybox-group="gall-1">
-                                            <img src="assets/images/portfolio/9.png" alt class="img img-responsive">
-                                            <div class="hover-content">
-                                                <i class="ti-plus"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="grid">
-                                    <div class="img-holder">
-                                        <a href="assets/images/portfolio/11.png" class="fancybox"
-                                            data-fancybox-group="gall-1">
-                                            <img src="assets/images/portfolio/11.png" alt class="img img-responsive">
-                                            <div class="hover-content">
-                                                <i class="ti-plus"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="grid">
-                                    <div class="img-holder">
-                                        <a href="assets/images/portfolio/10.png" class="fancybox"
-                                            data-fancybox-group="gall-1">
-                                            <img src="assets/images/portfolio/10.png" alt class="img img-responsive">
-                                            <div class="hover-content">
-                                                <i class="ti-plus"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="grid">
-                                    <div class="img-holder">
-                                        <a href="assets/images/portfolio/12.png" class="fancybox"
-                                            data-fancybox-group="gall-1">
-                                            <img src="assets/images/portfolio/12.png" alt class="img img-responsive">
-                                            <div class="hover-content">
-                                                <i class="ti-plus"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div> <!-- end container -->
-        </section>
-        <!-- end wpo-portfolio-section -->
-
+      
         <!-- start of wpo-contact-section -->
         <section class="wpo-contact-section-s2 section-padding d-none " id="doa">
             <div class="container">
@@ -461,7 +372,7 @@
                         <div class="section-title-icon">
                             <i class="fi flaticon-dove"></i>
                         </div>
-                        <h2>When & Where</h2>
+                        <h3> Pemberkatan & Resepsi</h3>
                     </div>
                 </div>
                 <div class="wpo-event-wrap">
@@ -506,6 +417,11 @@
         </section>
         <!-- end wpo-event-section -->
         
+
+
+       
+
+
           <!-- start dompet digital-->
       <section class="bg-dark text-white d-none" id="digital">
         <div class="container p-5">
@@ -526,6 +442,29 @@
       </section>
         <!-- end dompet digital-->
       
+    <!-- start wpo-portfolio-section -->
+    <section class="wpo-portfolio-section section-padding pt-0 d-none" id="gallery">
+        <div class="container">
+            <div class="row">
+                <div class="wpo-section-title">
+                    <div class="section-title-icon">
+                        <i class="fi flaticon-dove"></i>
+                    </div>
+                    <h2>Gallery</h2>
+                </div>
+            </div>
+            <div id="gambar"></div>
+
+          
+
+        </div> <!-- end container -->
+    </section>
+    <!-- end wpo-portfolio-section -->
+
+         <!-- <div id="gambar"></div> -->
+
+      
+
 
         <!-- start of wpo-site-footer-section -->
    
@@ -572,17 +511,74 @@
         var doa = document.getElementById("doa");
         var event = document.getElementById("event");
         var digital = document.getElementById("digital");
-
+        var home = document.getElementById("home");
+        var couple = document.getElementById("couple");
+        var body = document.getElementById("body");
+        var html = '';
         function buka() {
-            x.play();
+            body.classList.remove("bg-secondary");
             btn_pause.classList.remove("d-none");
             btn_play.classList.add("d-none");
             header.classList.remove("d-none");
-            // gallery.classList.remove("d-none");
+            gallery.classList.remove("d-none");
             doa.classList.remove("d-none");
             event.classList.remove("d-none");
             digital.classList.remove("d-none");
+            couple.classList.remove("d-none");
+            home.classList.add("d-none");
+   
             x.play();
+            // location.reload();
+
+            html +=`    <div class="sortable-gallery">
+                <div class="gallery-filters"></div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="portfolio-grids gallery-container clearfix">
+                            <div class="grid">
+                                <div class="">
+                                        <img src="assets/images/portfolio/7.png" alt class="img img-responsive">
+                                </div>
+                            </div>
+                            
+                            <div class="grid">
+                                <div class="">
+                                        <img src="assets/images/portfolio/11.png" alt class="img img-responsive">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="grid">
+                                <div class="">
+                                        <img src="assets/images/portfolio/9.png" alt class="img img-responsive">
+                                </div>
+                            </div>
+                            <div class="grid">
+                                <div class="">
+                                        <img src="assets/images/portfolio/8.png" alt class="img img-responsive">
+                                        
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="grid">
+                                <div class="">
+                                        <img src="assets/images/portfolio/10.png" alt class="img img-responsive">
+                                        
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="grid">
+                                <div class="">
+                                        <img src="assets/images/portfolio/12.png" alt class="img img-responsive">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>     `;
+
+            $('#gambar').html(html);
+
         }
 
         function playButton() {
@@ -602,8 +598,8 @@
 
         var script_url = "https://script.google.com/macros/s/AKfycbwe3rB9noFwvwbPkllSQjZSJvb4qNdL_SJJrzObQtFjn3qLy9rpTBepf4cneppTYkzG/exec";
         function insert_value() {
-            let nama = $("#nama").val();
             let radio = document.querySelector('input[name="kehadiran"]:checked');
+            let nama =document.querySelector('input[name="nama"]').value;
             let kehadiran = radio.value;
                
             let ucapan = $("#ucapan").val();
