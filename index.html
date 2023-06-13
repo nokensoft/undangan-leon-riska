@@ -30,6 +30,10 @@
     <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/sass/style.css" rel="stylesheet">
+
+    
+    <!-- SWEETALERT -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 
 <body class="color1">
@@ -66,7 +70,7 @@
         <!-- end preloader -->
         <!-- Start header -->
                 <!-- Start header -->
-                <header class="" id="myDiv">
+                <header class="d-none" id="header">
                     <div class="wpo-site-header">
                         <nav class="navigation navbar navbar-expand-lg navbar-light">
                             <div class="container-fluid">
@@ -128,11 +132,11 @@
                 </header>
         <!-- end of header -->
         <!-- start of hero -->
-        <section class="wpo-hero-slider wpo-hero-style-3" id="home" contenteditable="true">
-            <div class="wedding-announcement mt-2"  >
+        <section class="wpo-hero-slider wpo-hero-style-3" id="home"  >
+            <div class="wedding-announcement mt-5"  >
                 <div class="couple-text " >
                     <h3 class="wow slideInUp text-white" data-wow-duration="1s">Undangan Pernikahan</h3>
-                    <h2 class="wow slideInUp" data-wow-duration="1s">Leon & Risak</h2>
+                    <h2 class="wow slideInUp" data-wow-duration="1s">Leon & Riska</h2>
                     <!-- start wpo-wedding-date -->
                     <div class="wpo-wedding-date wow slideInUp" data-wow-duration="2.1s">
                         <div class="clock-grids">
@@ -140,19 +144,21 @@
                         </div>
                     </div>
                     <!-- end wpo-wedding-date -->
-                    <div class="wow slideInUp mt-5">
+                    <div class="wow slideInUp mt-1 "  >
                         <div class="row">
                             <div class="col-12">
-                                <p class="h2">Kepada YTH Bpk/Ibu/Sdra/I</p>
+                                <h3 class="text-white font-bolder">Kepada YTH Bpk/Ibu/Sdra/I</h3>
                             </div>
                             <div class="col-12  d-flex justify-content-center">
                                 <div class="bg-white col-6 rounded">
-                                    <h5 class="text-dark p-2">Tes</h5>
+                                    <h5 class="text-dark p-2">
+                                        <div id="nama"></div>
+                                    </h5>
                                 </div>
                             </div>  
-                            <!-- <div class="col-12 mt-5">
-                                <a href="#" class="theme-btn-s3 rounded"> Buka Undangan</a>
-                            </div> -->
+                            <div class="col-12 mb-5 mt-3">
+                                <a href="#" onclick="buka()" class="theme-btn-s3 rounded"> Buka Undangan</a>
+                            </div>
                         </div>
                        
                       
@@ -161,7 +167,7 @@
                 
             </div>
 
-            <div class="swiper-container">
+            <div class="swiper-container" >
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="slide-inner slide-bg-image" data-background="assets/images/slider/slide-1.png">
@@ -194,7 +200,7 @@
         </section>
         <!-- end of hero slider -->
         <!-- start couple-section -->
-        <section class="couple-section-s2 section-padding" id="couple">
+        <section class="couple-section-s2 section-padding"  id="">
             <div class="container">
                 <div class="row align-items-center justify-content-center">
                     <div class="col col-lg-11">
@@ -269,7 +275,7 @@
         </section>
         <!-- end couple-section -->
         <!-- start wpo-wedding-date -->
-        <section class="wpo-wedding-time">
+        <section class="wpo-wedding-time d-none">
             <h2 class="hidden">some</h2>
             <div class="container">
                 <div class="row">
@@ -291,7 +297,7 @@
         <!-- end story-section -->
 
         <!-- start wpo-portfolio-section -->
-        <section class="wpo-portfolio-section section-padding pt-0" id="gallery">
+        <section class="wpo-portfolio-section section-padding pt-0"  id="gallery">
             <div class="container">
                 <div class="row">
                     <div class="wpo-section-title">
@@ -382,7 +388,7 @@
         <!-- end wpo-portfolio-section -->
 
         <!-- start of wpo-contact-section -->
-        <section class="wpo-contact-section-s2 section-padding" id="doa">
+        <section class="wpo-contact-section-s2 section-padding d-none " id="doa">
             <div class="container">
                 <div class="wpo-rsvp-wrap">
                     <div class="row">
@@ -397,35 +403,31 @@
                                     </div>
                                     <form method="post" class="contact-validation-active" id="contact-form-main">
                                         <div>
-                                            <input type="text" class="form-control" name="Nama" id="Nama" placeholder="Nama Anda">
+                                            <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Anda">
                                         </div>
                                         <div class="radio-buttons">
                                             <p>
-                                                <input type="radio" id="attend" name="radio-group" checked>
-                                                <label for="attend">Ya, akan hadir</label>
+                                                <input type="radio" id="ya" value="Ya, akan hadir" name="kehadiran" checked>
+                                                <label for="ya">Ya, akan hadir</label>
                                             </p>
                                             <p>
-                                                <input type="radio" id="not" name="kehadiran">
-                                                <label for="not">Maaf, tidak hadir</label>
+                                                <input type="radio" id="tidak" value="Maaf, tidak hadir" name="kehadiran">
+                                                <label for="tidak">Maaf, tidak hadir</label>
                                             </p>
                                         </div>
                                         
                                         <div>
-                                            <input type="text" class="form-control" name="doa" id="what"
+                                            <input type="text" class="form-control" name="ucapan" id="ucapan"
                                                 placeholder="Doa & Ucapan ">
                                         </div>
                                         <div class="submit-area">
-                                            <button type="submit" class="theme-btn-s3">Simpan</button>
+                                            <button type="button" onclick="insert_value()" class="theme-btn-s3">Simpan</button>
                                             <div id="c-loader">
                                                 <i class="ti-reload"></i>
                                             </div>
                                         </div>
-                                        <div class="clearfix error-handling-messages">
-                                            <div id="success">Thank you</div>
-                                            <div id="error"> Error occurred while sending email. Please try again later.
-                                            </div>
-                                        </div>
-                                    </form>
+                                       
+                               
                                     <div class="border-style"></div>
                                 </div>
                                 <div class="vector-1">
@@ -452,7 +454,7 @@
         <!-- end of wpo-contact-section -->
       
         <!-- start wpo-event-section -->
-        <section class="wpo-event-section section-padding" id="event">
+        <section class="wpo-event-section section-padding d-none"  id="event">
             <div class="container">
                 <div class="row">
                     <div class="wpo-section-title-s2">
@@ -505,7 +507,7 @@
         <!-- end wpo-event-section -->
         
           <!-- start dompet digital-->
-      <section class="bg-dark text-white" id="digital">
+      <section class="bg-dark text-white d-none" id="digital">
         <div class="container p-5">
             <div class="row text-center">
                 <div class="col-12 ">
@@ -563,27 +565,88 @@
     <script src="assets/js/script.js"></script>
     <script>
         var x = document.getElementById("myAudio");
-      
-         playButton();
-             function playButton() {
-            let btn_pause = document.getElementById("pause-btn");
-            let btn_play = document.getElementById("play-btn");
+        var btn_pause = document.getElementById("pause-btn");
+        var btn_play = document.getElementById("play-btn");
+        var header = document.getElementById("header");
+        var gallery = document.getElementById("gallery");
+        var doa = document.getElementById("doa");
+        var event = document.getElementById("event");
+        var digital = document.getElementById("digital");
+
+        function buka() {
+            x.play();
+            btn_pause.classList.remove("d-none");
+            btn_play.classList.add("d-none");
+            header.classList.remove("d-none");
+            // gallery.classList.remove("d-none");
+            doa.classList.remove("d-none");
+            event.classList.remove("d-none");
+            digital.classList.remove("d-none");
+            x.play();
+        }
+
+        function playButton() {
+          
             btn_pause.classList.remove("d-none");
             btn_play.classList.add("d-none");
             x.play();
         }
 
         function pauseButton() {
-            let btn_pause = document.getElementById("pause-btn");
-            let btn_play = document.getElementById("play-btn");
             btn_pause.classList.add("d-none");
             btn_play.classList.remove("d-none");
             x.pause();
         }
-        var myDiv = document.getElementById('home');
-        myDiv.addEventListener('click', function() {
-            x.play();
-        });
+
+
+
+        var script_url = "https://script.google.com/macros/s/AKfycbwe3rB9noFwvwbPkllSQjZSJvb4qNdL_SJJrzObQtFjn3qLy9rpTBepf4cneppTYkzG/exec";
+        function insert_value() {
+            let nama = $("#nama").val();
+            let radio = document.querySelector('input[name="kehadiran"]:checked');
+            let kehadiran = radio.value;
+               
+            let ucapan = $("#ucapan").val();
+            console.info(nama);
+            console.info(ucapan);
+            console.info(kehadiran);
+            if (nama && ucapan && kehadiran) {
+                let url = script_url + "?callback=ctrlq&nama=" + nama + "&ucapan=" + ucapan + "&kehadiran=" + kehadiran + "&action=insert";
+                $("input[type='text']").val("");
+                $("textarea").val("");
+                var request = jQuery.ajax({
+                    crossDomain: true,
+                    url: url,
+                    method: "GET",
+                    dataType: "jsonp"
+                });
+
+
+                Swal.fire({         //displays a pop up with sweetalert
+                    icon: 'success',
+                    text: 'Pesan sudah tersimpan !',
+                    showConfirmButton: true,
+                    timer: 1000
+                });
+            } else {
+                Swal.fire({         //displays a pop up with sweetalert
+                    icon: 'error',
+                    text: 'Semua belum terisi !!',
+                    showConfirmButton: true,
+                    timer: 1000
+                });
+            }
+        }
+
+
+        let url = window.location.href;
+        let cut = url.substr(35);
+        if (cut === "") {
+            document.getElementById("nama").innerHTML = `Belum ada nama tamu undangan`;
+        } else {
+            let nama = cut.replace(/-/g, " ");
+            document.getElementById("nama").innerHTML = nama;
+        }
     </script>
 </body>
 
