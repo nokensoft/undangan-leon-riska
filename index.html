@@ -10,7 +10,7 @@
     <meta property="og:title" content="Leon & Riska" />
     <meta property="og:description" content="Leon & Riska -  Undangan Pernikahan" />
     <meta property="og:url" content="http://leoriska.com/" />
-    <meta property="og:site_name" content="SaCode" />
+    <meta property="og:site_name" content="leoriska" />
     <meta property="og:image" content="http://leoriska.com/assets/images/portfolio/meta.png" />
     <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
     <title> Leon & Riska - Undangan Pernikahan</title>
@@ -33,6 +33,21 @@
 </head>
 
 <body class="color1">
+    <!-- button play & pause start -->
+    <div id="sound-controls">
+        <a href="#pause" class="pause-btn d-none" onclick="pauseButton()" id="pause-btn">
+            <img src="assets/music/pause.png" srcset="" width="80" alt="Pause Button">
+        </a>
+        <a href="#play" onclick="playButton()" class="play-btn d-none" id="play-btn">
+            <img src="assets/music/play-button.png" width="80" alt="Play Button">
+        </a>
+    </div>
+    <!-- button play & pause end -->
+
+    <audio id="myAudio" allow="autoplay">
+        <source src="assets/music/music.mp3" type="audio/mpeg">
+        Browser kamu tidak support untuk memutar musik
+    </audio>
 
     <!-- start page-wrapper -->
     <div class="page-wrapper">
@@ -50,29 +65,74 @@
         </div>
         <!-- end preloader -->
         <!-- Start header -->
-        <header id="header">
-            <div class="wpo-site-header">
-                <nav class="navigation navbar navbar-expand-lg navbar-light">
-                    <div class="container-fluid">
-                        <div class="row align-items-center">
-                            <div class="col-12 text-center p-5">
-                                <div class="navbar-header">
-                                    <a class="navbar-brand logo" href="#"><small>Udangan</small> Pernikahan<span><i
-                                    class="fi flaticon-dove"></i></span></a>
+                <!-- Start header -->
+                <header class="" id="myDiv">
+                    <div class="wpo-site-header">
+                        <nav class="navigation navbar navbar-expand-lg navbar-light">
+                            <div class="container-fluid">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-3 col-md-3 col-3 d-lg-none dl-block">
+                                        <div class="mobail-menu">
+                                            <button type="button" class="navbar-toggler open-btn">
+                                                <span class="sr-only">Toggle navigation</span>
+                                                <span class="icon-bar first-angle"></span>
+                                                <span class="icon-bar middle-angle"></span>
+                                                <span class="icon-bar last-angle"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-6 col-6">
+                                        <div class="navbar-header">
+                                            <!-- <a class="navbar-brand logo" href="index.html"><small>My</small>love<span><i
+                                                        class="fi flaticon-dove"></i></span></a> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-md-1 col-1">
+                                        <div id="navbar" class="collapse navbar-collapse navigation-holder">
+                                            <button class="menu-close"><i class="ti-close"></i></button>
+                                            <ul class="nav navbar-nav mb-2 mb-lg-0">
+                                                <li class="">
+                                                    <a class="" href="#home">Home</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#couple">Couple</a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="#gallery">Gallery</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#doa">Doa & Ucapan</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#event">Event</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#digital">Dompet Digital</a>
+                                                </li>
+                                               
+                                            </ul>
+        
+                                        </div><!-- end of nav-collapse -->
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-2">
+                                        <div class="header-right">
+                                            <!-- <a class="theme-btn" href="rsvp.html"><span class="text">Attend Now</span> <span class="mobile">
+                                                <i class="fi flaticon-user"></i>
+                                            </span></a> -->
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div><!-- end of container -->
-                </nav>
-            </div>
-        </header>
+                            </div><!-- end of container -->
+                        </nav>
+                    </div>
+                </header>
         <!-- end of header -->
         <!-- start of hero -->
-        <section class="wpo-hero-slider wpo-hero-style-3">
-            <div class="wedding-announcement">
-                <div class="couple-text">
+        <section class="wpo-hero-slider wpo-hero-style-3" id="home" contenteditable="true">
+            <div class="wedding-announcement mt-2"  >
+                <div class="couple-text " >
+                    <h3 class="wow slideInUp text-white" data-wow-duration="1s">Undangan Pernikahan</h3>
                     <h2 class="wow slideInUp" data-wow-duration="1s">Leon & Risak</h2>
-                    <p class="wow slideInUp" data-wow-duration="1.8s">We Are Getting Married 23 June, 2023</p>
                     <!-- start wpo-wedding-date -->
                     <div class="wpo-wedding-date wow slideInUp" data-wow-duration="2.1s">
                         <div class="clock-grids">
@@ -80,7 +140,25 @@
                         </div>
                     </div>
                     <!-- end wpo-wedding-date -->
+                    <div class="wow slideInUp mt-5">
+                        <div class="row">
+                            <div class="col-12">
+                                <p class="h2">Kepada YTH Bpk/Ibu/Sdra/I</p>
+                            </div>
+                            <div class="col-12  d-flex justify-content-center">
+                                <div class="bg-white col-6 rounded">
+                                    <h5 class="text-dark p-2">Tes</h5>
+                                </div>
+                            </div>  
+                            <!-- <div class="col-12 mt-5">
+                                <a href="#" class="theme-btn-s3 rounded"> Buka Undangan</a>
+                            </div> -->
+                        </div>
+                       
+                      
+                     </div>
                 </div>
+                
             </div>
 
             <div class="swiper-container">
@@ -109,6 +187,10 @@
                     <div class="swiper-button-prev"></div>
                 </div>
             </div>
+       
+
+
+           
         </section>
         <!-- end of hero slider -->
         <!-- start couple-section -->
@@ -300,7 +382,7 @@
         <!-- end wpo-portfolio-section -->
 
         <!-- start of wpo-contact-section -->
-        <section class="wpo-contact-section-s2 section-padding" id="RSVP">
+        <section class="wpo-contact-section-s2 section-padding" id="doa">
             <div class="container">
                 <div class="wpo-rsvp-wrap">
                     <div class="row">
@@ -423,7 +505,7 @@
         <!-- end wpo-event-section -->
         
           <!-- start dompet digital-->
-      <section class="bg-dark text-white">
+      <section class="bg-dark text-white" id="digital">
         <div class="container p-5">
             <div class="row text-center">
                 <div class="col-12 ">
@@ -479,6 +561,30 @@
     <script src="assets/js/jquery-plugin-collection.js"></script>
     <!-- Custom script for this template -->
     <script src="assets/js/script.js"></script>
+    <script>
+        var x = document.getElementById("myAudio");
+      
+         playButton();
+             function playButton() {
+            let btn_pause = document.getElementById("pause-btn");
+            let btn_play = document.getElementById("play-btn");
+            btn_pause.classList.remove("d-none");
+            btn_play.classList.add("d-none");
+            x.play();
+        }
+
+        function pauseButton() {
+            let btn_pause = document.getElementById("pause-btn");
+            let btn_play = document.getElementById("play-btn");
+            btn_pause.classList.add("d-none");
+            btn_play.classList.remove("d-none");
+            x.pause();
+        }
+        var myDiv = document.getElementById('home');
+        myDiv.addEventListener('click', function() {
+            x.play();
+        });
+    </script>
 </body>
 
 </html>
