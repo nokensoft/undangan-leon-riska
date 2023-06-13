@@ -519,7 +519,7 @@
                     <p class="h5 text-white">3249 0100 7336 500</p>
                 </div>
                 <div class="col-12 mt-3">
-                    <button class="theme-btn-s3 rounded"> Salin </button>
+                    <button class="theme-btn-s3 rounded" id="btn-dompet"> Salin </button>
                 </div>
             </div>
         </div>
@@ -647,6 +647,32 @@
             let nama = cut.replace(/-/g, " ");
             document.getElementById("nama").innerHTML = nama;
         }
+
+
+    const copyBtn = document.getElementById('btn-dompet')
+    copyBtn.onclick = () => {
+    let teks = '324901007336500';
+    if(teks !== '324901007336500')
+    {
+        Swal.fire({         //displays a pop up with sweetalert
+        icon: 'error',
+        text: 'Norek salah !!',
+        showConfirmButton: true,
+        timer: 3000
+    });
+    }else{
+        navigator.clipboard.writeText(teks);
+        // let url =
+        document.execCommand('copy');    // Simply copies the selected text to clipboard 
+        Swal.fire({         //displays a pop up with sweetalert
+            icon: 'success',
+            text: 'Norek sudah tersalin !!',
+            showConfirmButton: true,
+            timer: 3000
+        });
+    }
+
+}
     </script>
 </body>
 
