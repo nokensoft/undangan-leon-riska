@@ -53,52 +53,24 @@ Version:        1.0.0
 /*---------------------------
 	Fonts
 ----------------------------*/
-.play-btn {
-  display: block;
-  width: 30px;
-  height: 30px;
-  line-height: 150px;
-  text-align: center;
-  color: white;
-  font-size: 30px;
-  font-weight: bold;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  text-decoration: none;
-  transition: ease all 0.3s;
-  position: fixed;
-  z-index: 9999;
-  right: 20px;
-  top: 100px;
-}
-
-
-.pause-btn {
-  display: block;
-  width: 30px;
-  height: 30px;
-  line-height: 150px;
-  text-align: center;
-  color: white;
-  font-size: 30px;
-  font-weight: bold;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  text-decoration: none;
-  transition: ease all 0.3s;
-  position: fixed;
-  z-index: 9999;
-  right: 20px;
-  top: 100px;
-}
-
-
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&display=swap");
 @font-face {
   font-family: 'Donalia';
   src: url("../fonts/Donalia.eot");
   src: url("../fonts/Donalia.eot?#iefix") format("embedded-opentype"), url("../fonts/Donalia.woff2") format("woff2"), url("../fonts/Donalia.woff") format("woff"), url("../fonts/Donalia.ttf") format("truetype");
 }
+
+.back {
+  width: 70%;
+  }
+  /*if your image has a 50% width for any kind of screen. 
+  But when you want to make it full-size for mobile devices you need to get help from media queries:*/
+  /*using media Queries */
+  @media only screen and (max-width: 480px) {
+  .back {
+  width: 100%;
+  }
+  }
 
 /* 1.1	Theme Reset Style */
 html {

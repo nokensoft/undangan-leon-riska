@@ -1,649 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:locale" content="id_ID" />
-    <meta property="og:type" content="Undangan Pernikahan" />
-    <meta property="og:title" content="Leon & Riska" />
-    <meta property="og:description" content="Leon & Riska -  Undangan Pernikahan" />
-    <meta property="og:url" content="https://leoriska.com/" />
-    <meta property="og:site_name" content="leoriska" />
-    <meta property="og:image" content="https://leoriska.com/assets/images/portfolio/meta.jpg" />
-    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
-    <title> Leon & Riska - Undangan Pernikahan</title>
-    <link href="assets/css/themify-icons.css" rel="stylesheet">
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/css/flaticon.css" rel="stylesheet">
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/magnific-popup.css" rel="stylesheet">
-    <link href="assets/css/animate.css" rel="stylesheet">
-    <link href="assets/css/owl.carousel.css" rel="stylesheet">
-    <link href="assets/css/owl.theme.css" rel="stylesheet">
-    <link href="assets/css/slick.css" rel="stylesheet">
-    <link href="assets/css/slick-theme.css" rel="stylesheet">
-    <link href="assets/css/swiper.min.css" rel="stylesheet">
-    <link href="assets/css/nice-select.css" rel="stylesheet">
-    <link href="assets/css/owl.transitions.css" rel="stylesheet">
-    <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
-    <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
-    <link href="assets/sass/style.css" rel="stylesheet">
-
-    <style>
-        
-    </style>
-    <!-- SWEETALERT -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Leon & Riska</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="cover/css/mdb.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="cover/css/style.css" />
 </head>
+<body>
+      <!--Main Navigation-->
+  <header>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Courgette');
+      @import url('https://fonts.googleapis.com/css2?family=Shantell+Sans');
 
-<body class="color1 bg-secondary" id="body" >
-    <!-- button play & pause start -->
-    <div id="sound-controls">
-        <a href="#pause" class="pause-btn d-none" onclick="pauseButton()" id="pause-btn">
-            <img src="assets/music/pause.png" srcset="" width="80" alt="Pause Button">
-        </a>
-        <a href="#play" onclick="playButton()" class="play-btn d-none" id="play-btn">
-            <img src="assets/music/play-button.png" width="80" alt="Play Button">
-        </a>
-    </div>
-    <!-- button play & pause end -->
+      
+      .font-satu {
+          font-family: "Courgette";
+      }
 
-    <audio id="myAudio" allow="autoplay">
-        <source src="assets/music/music.mp3" type="audio/mpeg">
-        Browser kamu tidak support untuk memutar musik
-    </audio>
+      .font-dua {
+        font-family: 'Shantell Sans', cursive;
+      }
+      /* Carousel styling */
+      #introCarousel,
+      .carousel-inner,
+      .carousel-item,
+      .carousel-item.active {
+        height: 100vh;
+      }
 
-    <!-- start page-wrapper -->
-    <div class="page-wrapper">
-        <!-- start preloader -->
-        <div class="preloader">
-            <div class="vertical-centered-box">
-                <div class="content">
-                    <div class="loader-circle"></div>
-                    <div class="loader-line-mask">
-                        <div class="loader-line"></div>
+      .carousel-item:nth-child(1) {
+        background-image: url('https://ik.imagekit.io/itzaibjor/cover2.jpg?updatedAt=1686706317280');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .carousel-item:nth-child(2) {
+        background-image: url('https://ik.imagekit.io/itzaibjor/cover1_1_.jpg?updatedAt=1686706317166');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .carousel-item:nth-child(3) {
+        background-image: url('https://ik.imagekit.io/itzaibjor/cover2.jpg?updatedAt=1686706317280');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      /* Height for devices larger than 576px */
+      @media (min-width: 992px) {
+        #introCarousel {
+          margin-top: -58.59px;
+        }
+      }
+
+      .navbar .nav-link {
+        color: #fff !important;
+      }
+    </style>
+
+    <!-- Navbar -->
+            <!-- Carousel wrapper -->
+        <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-mdb-target="#introCarousel" data-mdb-slide-to="0" class="active"></li>
+            <li data-mdb-target="#introCarousel" data-mdb-slide-to="1"></li>
+            <li data-mdb-target="#introCarousel" data-mdb-slide-to="2"></li>
+          </ol>
+
+          <!-- Inner -->
+          <div class="carousel-inner">
+            <!-- Single item -->
+            <div class="carousel-item active">
+              <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                  <div class="text-white text-center">
+                    <h1 class="mb-3 display-5 font-dua">Undangan Pernikahan</h1>
+                    <h5 class="mb-4 display-1 font-satu">Leon & Riska</h5>
+                    <a class="btn btn-danger btn-lg m-2 font-dua" href="home.html"> Buka Undangan <i class="fa fa-envelope"></i> </a>
+                    <p class="mb-1 font-dua">Kepada YTH </p>
+                    <div class="bg-white rounded ">
+                      <p class="text-dark p-3 font-bold font-dua">
+                        <div id="nama"></div>
+                      </p>
                     </div>
-                    <img src="assets/images/preloader.png" alt="">
+                  </div>
                 </div>
+              </div>
             </div>
+
+            <!-- Single item -->
+            <div class="carousel-item">
+              <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                  <div class="text-white text-center">
+                    <h1 class="mb-3 display-5 font-dua">Undangan Pernikahan</h1>
+                    <h5 class="mb-4 display-1 font-satu">Leon & Riska</h5>
+                    <a class="btn btn-danger btn-lg m-2 font-dua" href="home.html"> Buka Undangan <i class="fa fa-envelope"></i> </a>
+                    <p class="mb-1 font-dua">Kepada YTH </p>
+                    <div class="bg-white rounded ">
+                      <p class="text-dark p-3 font-bold font-dua">
+                        <div id="nama"></div>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Single item -->
+            <div class="carousel-item">
+              <!-- <div class="mask" style="
+                    background: linear-gradient(
+                      45deg,
+                      rgba(29, 236, 197, 0.7),
+                      rgba(91, 14, 214, 0.7) 100%
+                    );
+                  "> -->
+                <div>
+                <div class="d-flex justify-content-center align-items-center h-100">
+                  <div class="text-white text-center">
+                    <!-- <h2>And cover it with any mask</h2>
+                    <a class="btn btn-outline-light btn-lg m-2"
+                      href="https://mdbootstrap.com/docs/standard/content-styles/masks/" target="_blank" role="button">Learn
+                      about masks</a> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Inner -->
+
+          <!-- Controls -->
+          <a class="carousel-control-prev" href="#introCarousel" role="button" data-mdb-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#introCarousel" role="button" data-mdb-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
-        <!-- end preloader -->
-        <!-- Start header -->
-                <!-- Start header -->
-                <header class="d-none" id="header">
-                    <div class="wpo-site-header">
-                        <nav class="navigation navbar navbar-expand-lg navbar-light">
-                            <div class="container-fluid">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-3 col-md-3 col-3 d-lg-none dl-block">
-                                        <div class="mobail-menu">
-                                            <button type="button" class="navbar-toggler open-btn">
-                                                <span class="sr-only">Toggle navigation</span>
-                                                <span class="icon-bar first-angle"></span>
-                                                <span class="icon-bar middle-angle"></span>
-                                                <span class="icon-bar last-angle"></span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-6 col-6">
-                                        <div class="navbar-header">
-                                            <!-- <a class="navbar-brand logo" href="index.html"><small>My</small>love<span><i
-                                                        class="fi flaticon-dove"></i></span></a> -->
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-8 col-md-1 col-1">
-                                        <div id="navbar" class="collapse navbar-collapse navigation-holder">
-                                            <button class="menu-close"><i class="ti-close"></i></button>
-                                            <ul class="nav navbar-nav mb-2 mb-lg-0">
-                                                <li class="">
-                                                    <a class="" href="#home">Beranda</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#couple">Pasangan</a>
-                                                </li>
-                                               
-                                                
-                                                <li>
-                                                    <a href="#event">Acara</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#doa">Doa & Ucapan</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#digital">Dompet Digital</a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="#gallery">Gallery</a>
-                                                </li>                                               
-                                            </ul>
-        
-                                        </div><!-- end of nav-collapse -->
-                                    </div>
-                                    <div class="col-lg-2 col-md-2 col-2">
-                                        <div class="header-right">
-                                            <!-- <a class="theme-btn" href="rsvp.html"><span class="text">Attend Now</span> <span class="mobile">
-                                                <i class="fi flaticon-user"></i>
-                                            </span></a> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- end of container -->
-                        </nav>
-                    </div>
-                </header>
-        <!-- end of header -->
-        <!-- start of hero -->
-        <section class="wpo-hero-slider wpo-hero-style-3" id="home"   >
-            <div class="wedding-announcement " style="height: 100%;  ">
-                <div class="couple-text " >
-                    <h3 class="wow slideInUp text-white mt-5" data-wow-duration="1s">Undangan Pernikahan</h3>
-                    <h2 class="wow slideInUp" data-wow-duration="1s">Leon & Riska</h2>
-                    <!-- start wpo-wedding-date -->
-                    <div class="wpo-wedding-date wow slideInUp" data-wow-duration="2.1s">
-                        <div class="clock-grids">
-                            <div id="clock"></div>
-                        </div>
-                    </div>
-                    <!-- end wpo-wedding-date -->
-                    <div class="wow slideInUp mt-1 ">
-                        <div class="row">
-                            <div class="col-12">
-                                <p class=" h5 text-white font-bolder">Kepada YTH Bpk/Ibu/Sdra/I</p>
-                            </div>
-                            <div class="col-12  d-flex justify-content-center">
-                                <div class="bg-white col-6 rounded">
-                                    <p class="text-dark p-1 h5">
-                                        <div id="nama"></div>
-                                    </p>
-                                </div>
-                            </div>  
-                            <div class="col-12 mt-3 " style="margin-bottom: 200px;">
-                                <a href="#" onclick="buka()" class="theme-btn-s3 rounded"> Buka Undangan</a>
-                            </div>
-                        </div>
-                       
-                     </div>
-                </div>
-                
-            </div>
+        <!-- Carousel wrapper -->
+      </header>
+      <!--Main Navigation-->
 
-            <div class="swiper-container" >
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="slide-inner slide-bg-image" data-background="assets/images/slider/slide-1.png">
-                        </div> <!-- end slide-inner --> 
-                    </div> <!-- end swiper-slide -->
+      <!--Main layout-->
+    
+      <!--Main layout-->
 
-                    <div class="swiper-slide">
-                        <div class="slide-inner slide-bg-image" data-background="assets/images/slider/slide-2.png">
-                        </div> <!-- end slide-inner --> 
-                    </div> <!-- end swiper-slide -->
-
-                    <div class="swiper-slide">
-                        <div class="slide-inner slide-bg-image" data-background="assets/images/slider/slide-3.png">
-                        </div> <!-- end slide-inner --> 
-                    </div> <!-- end swiper-slide -->
-                </div>
-                <!-- end swiper-wrapper -->
-
-                <!-- swipper controls -->
-                <div class="swiper-pagination"></div>
-                <div class="next-prev-btn">
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
-            </div>
-       
-
-
-           
-        </section>
-        <!-- end of hero slider -->
-   
-
-      
-   
-
-
-             <!-- start couple-section -->
-             <section class="couple-section-s2 section-padding d-none"  id="couple">
-                <div class="container">
-                    <div class="row align-items-center justify-content-center">
-                        <div class="col col-lg-11">
-                            <div class="couple-area clearfix">
-                                <div class="couple-item bride">
-                                    <div class="row align-items-center">
-                                        <div class="col-lg-4">
-                                            <div class="couple-img">
-                                                <img src="assets/images/couple/4.png" alt="">
-                                                <div class="couple-shape">
-                                                    <img src="assets/images/couple/shape-3.png" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-7">
-                                            <div class="couple-text">
-                                                <h3>Leonardo A. Numberi</h3>
-                                                <div class="">
-                                                    <p class="mb-0 h1">Putra dari </p>
-                                                    <p class="h4 mb-0">Bpk. Pdt. Yance Numberi, M.Mis </p>
-                                                    <p class="mb-0 h1">&</p>
-                                                    <p class="mb-0 h4">Ibu Sendilice Oukhlieszyie Papilaya, S.Th</p>
-                                                </div>
-                                              
-                                                <!-- <div class="social">
-                                                    <ul>
-                                                        <li><a href="#"><i class="ti-facebook"></i></a></li>
-                                                        <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-                                                        <li><a href="#"><i class="ti-instagram"></i></a></li>
-                                                        <li><a href="#"><i class="ti-pinterest"></i></a></li>
-                                                    </ul>
-                                                </div> -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="couple-item groom">
-                                    <div class="row align-items-center">
-                                        <div class="col-lg-7 order-lg-1 order-2">
-                                            <div class="couple-text">
-                                                <h3>Marhen Riska Y. Balle</h3>
-                                                <div class="">
-                                                    <p class="mb-0 h1">Putri dari </p>
-                                                    <p class="h4 mb-0">Bpk. Drs. Soleman Elifelit Balle </p>
-                                                    <p class="mb-0 h1">&</p>
-                                                    <p class="mb-0 h4">Ibu Suriati Ariani Djutadjo</p>
-                                                </div>
-                                                <!-- <div class="social">
-                                                    <ul>
-                                                        <li><a href="#"><i class="ti-facebook"></i></a></li>
-                                                        <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-                                                        <li><a href="#"><i class="ti-instagram"></i></a></li>
-                                                        <li><a href="#"><i class="ti-pinterest"></i></a></li>
-                                                    </ul>
-                                                </div> -->
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 order-lg-2 order-1">
-                                            <div class="couple-img">
-                                                <img src="assets/images/couple/5.png" alt="">
-                                                <div class="couple-shape">
-                                                    <img src="assets/images/couple/shape-4.png" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- end container -->
-            </section>
-            <!-- end couple-section -->
-            <!-- start wpo-wedding-date -->
-            <section class="wpo-wedding-time d-none">
-                <h2 class="hidden">some</h2>
-                <div class="container">
-                    <div class="row">
-                        <div class="col col-xs-12">
-                            <div class="clock-grids">
-                                <div id="clock2"></div>
-                                <div class="frame1"><img src="assets/images/countdown/frame1.png" alt=""></div>
-                                <div class="frame2"><img src="assets/images/countdown/frame2.png" alt=""></div>
-                                <div class="frame3"><img src="assets/images/countdown/frame3.png" alt=""></div>
-                                <div class="frame4"><img src="assets/images/countdown/frame4.png" alt=""></div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- end container -->
-            </section>
-            <!-- end wpo-wedding-date -->
-            <!-- start story-section -->
-            
-            <!-- end story-section -->
-      
-        <!-- start wpo-event-section -->
-        <section class="wpo-event-section section-padding d-none"  id="event">
-            <div class="container">
-                <div class="row">
-                    <div class="wpo-section-title-s2">
-                        <div class="section-title-icon">
-                            <i class="fi flaticon-dove"></i>
-                        </div>
-                        <h3> Pemberkatan & Resepsi</h3>
-                    </div>
-                </div>
-                <div class="wpo-event-wrap">
-                    <div class="row">
-                        <div class="col col-lg-6 col-md-6 col-12">
-                            <div class="wpo-event-item">
-                                <div class="wpo-event-text">
-                                    <h2>Pemberkatan Nikah</h2>
-                                    <ul>
-                                        <li>Jumah, 23 Juni, 2023 <br>
-                                            14:00 PM </li>
-                                        <li>GKI Petrus Waena</li>
-                                  
-                                        <li> <a class=""  target="_blank"
-                                                href="https://maps.app.goo.gl/6Eu6MVL7qJc886LD7">Lihat
-                                                Peta</a></li>
-
-                                                
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-lg-6 col-md-6 col-12">
-                            <div class="wpo-event-item">
-                                <div class="wpo-event-text">
-                                    <h2>Resepsi</h2>
-                                    <ul>
-                                        <li>Jumah, 23 Juni, 2023 <br>
-                                            17:00 PM </li>
-                                        <li>EGrand ABE Hotel Jayapura</li>
-                                        <li> <a class=""  target="_blank"
-                                        href="https://maps.app.goo.gl/fEuqA9nRmaLHNeDS9">Lihat
-                                        Peta</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div> <!-- end container -->
-        </section>
-        <!-- end wpo-event-section -->
-
-
-
-             <!-- start of wpo-contact-section -->
-             <section class="wpo-contact-section-s2 section-padding d-none " id="doa">
-                <div class="container">
-                    <div class="wpo-rsvp-wrap">
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <div class="wpo-contact-section-wrapper">
-                                    <div class="wpo-contact-form-area">
-                                        <div class="wpo-section-title">
-                                            <div class="section-title-icon">
-                                                <i class="fi flaticon-dove"></i>
-                                            </div>
-                                            <h2>Doa & Ucapan</h2>
-                                        </div>
-                                        <form method="post" class="contact-validation-active" id="contact-form-main">
-                                            <div>
-                                                <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Anda">
-                                            </div>
-                                            <div class="radio-buttons">
-                                                <p>
-                                                    <input type="radio" id="ya" value="Ya, akan hadir" name="kehadiran" checked>
-                                                    <label for="ya">Ya, akan hadir</label>
-                                                </p>
-                                                <p>
-                                                    <input type="radio" id="tidak" value="Maaf, tidak hadir" name="kehadiran">
-                                                    <label for="tidak">Maaf, tidak hadir</label>
-                                                </p>
-                                            </div>
-                                            
-                                            <div>
-                                                <input type="text" class="form-control" name="ucapan" id="ucapan"
-                                                    placeholder="Doa & Ucapan ">
-                                            </div>
-                                            <div class="submit-area">
-                                                <button type="button" onclick="insert_value()" class="theme-btn-s3">Simpan</button>
-                                                <div id="c-loader">
-                                                    <i class="ti-reload"></i>
-                                                </div>
-                                            </div>
-                                           
-                                   
-                                        <div class="border-style"></div>
-                                    </div>
-                                    <div class="vector-1">
-                                        <img src="assets/images/rsvp/flower1.png" alt="">
-                                    </div>
-                                    <div class="vector-2">
-                                        <img src="assets/images/rsvp/flower2.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="right-img">
-                            <img src="assets/images/rsvp/right.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="shape-1">
-                    <img src="assets/images/rsvp/shape1.png" alt="">
-                </div>
-                <div class="shape-2">
-                    <img src="assets/images/rsvp/shape2.png" alt="">
-                </div>
-            </section>
-            <!-- end of wpo-contact-section -->
-        
-
-
-       
-
-
-          <!-- start dompet digital-->
-      <section class="bg-dark text-white d-none" id="digital">
-        <div class="container p-5">
-            <div class="row text-center">
-                <div class="col-12 ">
-                    <h1 class="text-white">Dompet Digital</h1>
-                </div>
-                <div class="col-12 mt-5">
-                    <p class="h2 text-white">Bank BRI</p>
-                    <p class="h5 text-white">An. Leonardo Ashreyandi Numberi</p>
-                    <p class="h5 text-white">3249 0100 7336 500</p>
-                </div>
-                <div class="col-12 mt-3">
-                    <button class="theme-btn-s3 rounded" id="btn-dompet"> Salin </button>
-                </div>
-            </div>
-        </div>
-      </section>
-        <!-- end dompet digital-->
-      
-    <!-- start wpo-portfolio-section -->
-    <section class="wpo-portfolio-section section-padding pt-0 d-none" id="gallery">
-        <div class="container">
-            <div class="row">
-                <div class="wpo-section-title">
-                    <div class="section-title-icon">
-                        <i class="fi flaticon-dove"></i>
-                    </div>
-                    <h2>Gallery</h2>
-                </div>
-            </div>
-            <div id="gambar"></div>
-
-          
-
-        </div> <!-- end container -->
-    </section>
-    <!-- end wpo-portfolio-section -->
-
-         <!-- <div id="gambar"></div> -->
-
-      
-
-
-        <!-- start of wpo-site-footer-section -->
-   
-        <!-- end of wpo-site-footer-section -->
-        <!-- color-switcher -->
-        <!-- <div class="color-switcher-wrap">
-            <div class="color-switcher-item">
-                <div class="color-toggle-btn">
-                    <i class="fa fa-cog"></i>
-                </div>
-                <ul id="switcher">
-                    <li class="btn btn1" id="Button1"></li>
-                    <li class="btn btn2" id="Button2"></li>
-                    <li class="btn btn3" id="Button3"></li>
-                    <li class="btn btn4" id="Button4"></li>
-                    <li class="btn btn5" id="Button5"></li>
-                    <li class="btn btn6" id="Button6"></li>
-                    <li class="btn btn7" id="Button7"></li>
-                    <li class="btn btn8" id="Button8"></li>
-                    <li class="btn btn9" id="Button9"></li>
-                </ul>
-            </div>
-        </div> -->
-
-    </div>
-    <!-- end of page-wrapper -->
-
-    <!-- All JavaScript files
-    ================================================== -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <!-- Plugins for this template -->
-    <script src="assets/js/modernizr.custom.js"></script>
-    <script src="assets/js/jquery.dlmenu.js"></script>
-    <script src="assets/js/jquery-plugin-collection.js"></script>
-    <!-- Custom script for this template -->
-    <script src="assets/js/script.js"></script>
-    <script>
-        var x = document.getElementById("myAudio");
-        var btn_pause = document.getElementById("pause-btn");
-        var btn_play = document.getElementById("play-btn");
-        var header = document.getElementById("header");
-        var gallery = document.getElementById("gallery");
-        var doa = document.getElementById("doa");
-        var event = document.getElementById("event");
-        var digital = document.getElementById("digital");
-        var home = document.getElementById("home");
-        var couple = document.getElementById("couple");
-        var body = document.getElementById("body");
-        var html = '';
-        function buka() {
-            body.classList.remove("bg-secondary");
-            btn_pause.classList.remove("d-none");
-            btn_play.classList.add("d-none");
-            header.classList.remove("d-none");
-            gallery.classList.remove("d-none");
-            doa.classList.remove("d-none");
-            event.classList.remove("d-none");
-            digital.classList.remove("d-none");
-            couple.classList.remove("d-none");
-            home.classList.add("d-none");
-   
-            x.play();
-            // location.reload();
-
-            html +=`    <div class="sortable-gallery">
-                <div class="gallery-filters"></div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="portfolio-grids gallery-container clearfix">
-                            <div class="grid">
-                                <div class="">
-                                        <img src="assets/images/portfolio/7.png" alt class="img img-responsive">
-                                </div>
-                            </div>
-                            
-                            <div class="grid">
-                                <div class="">
-                                        <img src="assets/images/portfolio/11.png" alt class="img img-responsive">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="grid">
-                                <div class="">
-                                        <img src="assets/images/portfolio/9.png" alt class="img img-responsive">
-                                </div>
-                            </div>
-                            <div class="grid">
-                                <div class="">
-                                        <img src="assets/images/portfolio/8.png" alt class="img img-responsive">
-                                        
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="grid">
-                                <div class="">
-                                        <img src="assets/images/portfolio/10.png" alt class="img img-responsive">
-                                        
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="grid">
-                                <div class="">
-                                        <img src="assets/images/portfolio/12.png" alt class="img img-responsive">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>     `;
-
-            $('#gambar').html(html);
-
-        }
-
-        function playButton() {
-          
-            btn_pause.classList.remove("d-none");
-            btn_play.classList.add("d-none");
-            x.play();
-        }
-
-        function pauseButton() {
-            btn_pause.classList.add("d-none");
-            btn_play.classList.remove("d-none");
-            x.pause();
-        }
-
-
-
-        var script_url = "https://script.google.com/macros/s/AKfycbwe3rB9noFwvwbPkllSQjZSJvb4qNdL_SJJrzObQtFjn3qLy9rpTBepf4cneppTYkzG/exec";
-        function insert_value() {
-            let radio = document.querySelector('input[name="kehadiran"]:checked');
-            let nama =document.querySelector('input[name="nama"]').value;
-            let kehadiran = radio.value;
-               
-            let ucapan = $("#ucapan").val();
-            console.info(nama);
-            console.info(ucapan);
-            console.info(kehadiran);
-            if (nama && ucapan && kehadiran) {
-                let url = script_url + "?callback=ctrlq&nama=" + nama + "&ucapan=" + ucapan + "&kehadiran=" + kehadiran + "&action=insert";
-                $("input[type='text']").val("");
-                $("textarea").val("");
-                var request = jQuery.ajax({
-                    crossDomain: true,
-                    url: url,
-                    method: "GET",
-                    dataType: "jsonp"
-                });
-
-
-                Swal.fire({         //displays a pop up with sweetalert
-                    icon: 'success',
-                    text: 'Pesan sudah tersimpan !',
-                    showConfirmButton: true,
-                    timer: 1000
-                });
-            } else {
-                Swal.fire({         //displays a pop up with sweetalert
-                    icon: 'error',
-                    text: 'Semua belum terisi !!',
-                    showConfirmButton: true,
-                    timer: 1000
-                });
-            }
-        }
-
-
-        let url = window.location.href;
+      <!--Footer-->
+    
+      <!--Footer-->
+        <!-- MDB -->
+        <script type="text/javascript" src="cover/js/mdb.min.js"></script>
+        <!-- Custom scripts -->
+      <script type="text/javascript" src="cover/js/script.js"></script>
+<script>
+  let url = window.location.href;
         let cut = url.substr(37);
         if (cut === "") {
             document.getElementById("nama").innerHTML = `Belum ada nama tamu undangan`;
@@ -651,32 +177,7 @@
             let nama = cut.replace(/-/g, " ");
             document.getElementById("nama").innerHTML = nama;
         }
+</script>
 
-
-    const copyBtn = document.getElementById('btn-dompet')
-    copyBtn.onclick = () => {
-    let teks = '324901007336500';
-    if(teks !== '324901007336500')
-    {
-        Swal.fire({         //displays a pop up with sweetalert
-        icon: 'error',
-        text: 'Norek salah !!',
-        showConfirmButton: true,
-        timer: 3000
-    });
-    }else{
-        navigator.clipboard.writeText(teks);
-        // let url =
-        Swal.fire({         //displays a pop up with sweetalert
-            icon: 'success',
-            text: 'Norek sudah tersalin !!',
-            showConfirmButton: true,
-            timer: 3000
-        });
-    }
-
-}
-    </script>
 </body>
-
 </html>
