@@ -431,6 +431,8 @@
        
         <!-- end wpo-team-section -->
         <!-- start wpo-event-section -->
+
+        
         <section class="wpo-event-section section-padding" id="event">
             <div class="container">
                 <div class="row">
@@ -469,7 +471,7 @@
                                     <ul>
                                         <li>Jumat, 23 Juni, 2023 <br>
                                             17:00 PM </li>
-                                        <li>Grand ABE Hotel Jayapura</li>
+                                        <li>Grand ABE Hotel Jayapura Ballroom Lt. 7</li>
                                         <li> <a class=""  target="_blank"
                                         href="https://maps.app.goo.gl/fEuqA9nRmaLHNeDS9">Lihat
                                         Peta</a></li>
@@ -513,6 +515,68 @@
             </div>
         </section>
         <!-- end of wpo-contact-section -->
+
+
+
+        <!-- Doa -->
+        <section class="wpo-contact-section-s2 section-padding" id="RSVP">
+            <div class="container">
+                <div class="wpo-rsvp-wrap">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="wpo-contact-section-wrapper">
+                                <div class="wpo-contact-form-area">
+                                    <div class="wpo-section-title">
+                                        <div class="section-title-icon">
+                                            <i class="fi flaticon-dove"></i>
+                                        </div>
+                                        <h2>Doa & Ucapan</h2>
+                                    </div>
+                                        <div>
+                                            <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Anda">
+                                        </div>
+                                        <div class="radio-buttons">
+                                            <p>
+                                                <input type="radio" id="ya" value="Ya, Hadir" name="kehadiran" checked>
+                                                <label for="ya">Ya, Hadir</label>
+                                            </p>
+                                            <p>
+                                                <input type="radio" id="tidak" value="Maaf, Tidak Hadir" name="kehadiran">
+                                                <label for="tidak">Maaf, Tidak Hadir</label>
+                                            </p>
+                                        </div>
+                                  
+                                        <div>
+                                            <textarea name="doa" placeholder="Doa & Ucapan" class="form-control" id="doa" cols="30" rows="10"></textarea>
+                                        </div>
+                                       
+                                        <div class="submit-area">
+                                            <button type="button" onclick="kirim()" class="theme-btn-s3">Simpan</button>
+                                        </div>
+                                        
+                                    <div class="border-style"></div>
+                                </div>
+                                <div class="vector-1">
+                                    <img src="assets/images/rsvp/flower1.png" alt="">
+                                </div>
+                                <div class="vector-2">
+                                    <img src="assets/images/rsvp/flower2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="right-img">
+                        <img src="assets/images/rsvp/right.png" alt="">
+                    </div> -->
+                </div>
+            </div>
+            <div class="shape-1">
+                <img src="assets/images/rsvp/shape1.png" alt="">
+            </div>
+            <div class="shape-2">
+                <img src="assets/images/rsvp/shape2.png" alt="">
+            </div>
+        </section>
 
         <!-- start of wpo-site-footer-section -->
         <footer class="wpo-site-footer">
@@ -601,6 +665,44 @@
             btn_pause.classList.add("d-none");
             btn_play.classList.remove("d-none");
             music.pause();
+        }
+
+
+        function kirim()
+        {
+            var script_url = "https://script.google.com/macros/s/AKfycbzGuyVYhMbNuyuOa1pS1rBFghpEYCpZwm2eE3p1E4xLMaxMDDfyE-L1CcIiWUaD2Kyh/exec";
+
+            let nama = $("#nama").val();
+            let doa = $("#doa").val();
+            let kehadiran = document.querySelector('input[name="kehadiran"]:checked').value;
+
+            if (nama && doa && kehadiran) {
+                let url = script_url + "?callback=ctrlq&nama=" + nama + "&ucapan=" + doa + "&kehadiran=" + kehadiran + "&action=insert";
+                $("input[type='text']").val("");
+                $("textarea").val("");
+                var request = jQuery.ajax({
+                    crossDomain: true,
+                    url: url,
+                    method: "GET",
+                    dataType: "jsonp"
+                });
+
+
+                Swal.fire({         //displays a pop up with sweetalert
+                    icon: 'success',
+                    text: 'Pesan sudah tersimpan !',
+                    showConfirmButton: true,
+                    timer: 1000
+                });
+            } else {
+                Swal.fire({         //displays a pop up with sweetalert
+                    icon: 'error',
+                    text: 'Semua belum terisi !!',
+                    showConfirmButton: true,
+                    timer: 1000
+                });
+            }
+            
         }
         </script>
 </body>
