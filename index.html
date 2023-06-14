@@ -99,9 +99,8 @@
                     <h5 class="mb-4 display-1 font-satu">Leon & Riska</h5>
                     <a class="btn btn-danger btn-lg m-2 font-dua" href="home.html"> Buka Undangan <i class="fa fa-envelope"></i> </a>
                     <p class="mb-1 font-dua">Kepada YTH </p>
-                    <div class="bg-white rounded ">
-                      <p class="text-dark p-3 font-bold font-dua">
-                        <div id="nama" class="text-dark"></div>
+                    <div class="bg-white rounded">
+                      <p class="text-dark p-2  font-bold font-dua" id="nama">
                       </p>
                     </div>
                   </div>
@@ -119,8 +118,7 @@
                     <a class="btn btn-danger btn-lg m-2 font-dua" href="home.html"> Buka Undangan <i class="fa fa-envelope"></i> </a>
                     <p class="mb-1 font-dua">Kepada YTH </p>
                     <div class="bg-white rounded ">
-                      <p class="text-dark p-3 font-bold font-dua">
-                        <div id="nama " class="text-dark "></div>
+                      <p class="text-dark p-2  font-bold font-dua" id="namaDua">
                       </p>
                     </div>
                   </div>
@@ -181,9 +179,11 @@
         let cut = url.substr(37);
         if (cut === "") {
             document.getElementById("nama").innerHTML = `<p class="text-dark">Belum ada nama tamu undangan </p>`;
+            document.getElementById("namaDua").innerHTML = `<p class="text-dark">Belum ada nama tamu undangan </p>`;
         } else {
             let nama = cut.replace(/-/g, " ");
             document.getElementById("nama").innerHTML =`<p class="text-dark"> `+ nama +` </p>`
+            document.getElementById("namaDua").innerHTML =`<p class="text-dark"> `+ nama +` </p>`
         }
 </script>
 

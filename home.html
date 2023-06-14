@@ -32,9 +32,59 @@
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/sass/style.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <style>
+          /* music controls */
+          .play-btn {
+            display: block;
+            width: 20px;
+            height: 20px;
+            line-height: 50px;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            text-decoration: none;
+            transition: ease all 0.3s;
+            position: fixed;
+            z-index: 9999;
+            right: 20px;
+            top: 100px;
+        }
+
+        .pause-btn {
+            display: block;
+            width: 20px;
+            height: 20px;
+            line-height: 50px;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            text-decoration: none;
+            transition: ease all 0.3s;
+            position: fixed;
+            z-index: 9999;
+            right: 20px;
+            top: 100px;
+        }
+    </style>
 </head>
 
 <body>
+      <!-- button play & pause -->
+      <div id="sound-controls">
+        <a href="#pause" class="pause-btn d-none" onclick="pauseButton()" id="pause-btn">
+            <img src="assets/music/pause.png" alt=""   srcset="" width="40">
+        </a>
+        <a href="#play" onclick="playButton()" class="play-btn d-none" id="play-btn">
+            <img src="assets/music/play-button.png" width="40" alt="">
+        </a>
+    </div>
     <audio id="myAudio" autoplay>
         <source src="assets/music/music.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
@@ -398,7 +448,7 @@
                                 <div class="wpo-event-text">
                                     <h2>Pemberkatan Nikah</h2>
                                     <ul>
-                                        <li>Jumah, 23 Juni, 2023 <br>
+                                        <li>Jumat , 23 Juni, 2023 <br>
                                             14:00 PM </li>
                                         <li>GKI Petrus Waena</li>
                                   
@@ -417,9 +467,9 @@
                                 <div class="wpo-event-text">
                                     <h2>Resepsi</h2>
                                     <ul>
-                                        <li>Jumah, 23 Juni, 2023 <br>
+                                        <li>Jumat, 23 Juni, 2023 <br>
                                             17:00 PM </li>
-                                        <li>EGrand ABE Hotel Jayapura</li>
+                                        <li>Grand ABE Hotel Jayapura</li>
                                         <li> <a class=""  target="_blank"
                                         href="https://maps.app.goo.gl/fEuqA9nRmaLHNeDS9">Lihat
                                         Peta</a></li>
@@ -498,18 +548,18 @@
        
        var music = document.getElementById("myAudio");
 
-    Swal.fire({         //displays a pop up with sweetalert
-        icon: 'warning',
-        text: 'Klik tombol ok untuk membuka undangan',
-        timer: 300000
+//     Swal.fire({         //displays a pop up with sweetalert
+//         icon: 'warning',
+//         text: 'Klik tombol ok untuk membuka undangan',
+//         timer: 300000
 
-    })
-    .then((willDelete) => {
-  if (willDelete) {
-           console.info('tes');
-           music.play();
-        }
-    })
+//     })
+//     .then((willDelete) => {
+//   if (willDelete) {
+//            console.info('tes');
+//            music.play();
+//         }
+//     })
 
     
         
@@ -536,6 +586,22 @@
     }
 
 }
+        pauseButton();
+        function playButton() {
+            let btn_pause = document.getElementById("pause-btn");
+            let btn_play = document.getElementById("play-btn");
+            btn_pause.classList.remove("d-none");
+            btn_play.classList.add("d-none");
+            music.play();
+        }
+        
+        function pauseButton() {
+            let btn_pause = document.getElementById("pause-btn");
+            let btn_play = document.getElementById("play-btn");
+            btn_pause.classList.add("d-none");
+            btn_play.classList.remove("d-none");
+            music.pause();
+        }
         </script>
 </body>
 
