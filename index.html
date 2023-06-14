@@ -180,10 +180,10 @@
   let url = window.location.href;
         let cut = url.substr(37);
         if (cut === "") {
-            document.getElementById("nama").innerHTML = `Belum ada nama tamu undangan`;
+            document.getElementById("nama").innerHTML = `<p class="text-dark">Belum ada nama tamu undangan </p>`;
         } else {
             let nama = cut.replace(/-/g, " ");
-            document.getElementById("nama").innerHTML = nama;
+            document.getElementById("nama").innerHTML =`<p class="text-dark"> `+ nama +` </p>`
         }
 </script>
 
